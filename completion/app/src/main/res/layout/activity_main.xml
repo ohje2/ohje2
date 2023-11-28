@@ -1,0 +1,42 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Department Spinner -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/spinner_border"> <!-- spinner_border.xml 파일의 스타일을 적용 -->
+
+        <Spinner
+            android:id="@+id/departmentSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textSize="30sp" />
+    </FrameLayout>
+
+    <!-- RecyclerView for Checklist -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="16dp" />
+
+    <!-- Total Checked Items TextView -->
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: 0"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:textSize="20sp" />
+
+</LinearLayout>
